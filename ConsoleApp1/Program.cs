@@ -18,9 +18,10 @@ namespace ConsoleApp1
             //檢查回應的伺服器狀態StatusCode是否是200 OK
             if (responseMessage.StatusCode == System.Net.HttpStatusCode.OK)
             {
+                // .Result return string without Task
                 string response = responseMessage.Content.ReadAsStringAsync().Result;//取得內容
                 
-                Console.WriteLine(response);
+                // Console.WriteLine(response);
 
                 // 使用AngleSharp時的前置設定
                 var config = Configuration.Default;
